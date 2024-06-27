@@ -10,8 +10,19 @@
 <body>
     <div class="dashboard">
         <h1>Organization Comparison Dashboard</h1>
+        <div class="controls">
+            <button onclick="compareOrg('Org A')">Compare Org A</button>
+            <button onclick="compareOrg('Org B')">Compare Org B</button>
+            <button onclick="compareOrg('Org C')">Compare Org C</button>
+        </div>
+        <div class="content">
+            <p>Select an organization to see the comparison metrics.</p>
+        </div>
         <div class="chart-container">
             <canvas id="orgChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="radarChart"></canvas>
         </div>
     </div>
     <script src="script.js"></script>
