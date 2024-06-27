@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organization Comparison Dashboard</title>
+    <title>Service Comparison</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="dashboard">
-        <h1>Organization Comparison Dashboard</h1>
-        <div class="controls">
-            <button onclick="compareOrg('Org A')">Compare Org A</button>
-            <button onclick="compareOrg('Org B')">Compare Org B</button>
-            <button onclick="compareOrg('Org C')">Compare Org C</button>
-        </div>
-        <div class="content">
-            <p>Select an organization to see the comparison metrics.</p>
-        </div>
-        <div class="chart-container">
-            <canvas id="orgChart"></canvas>
-        </div>
-        <div class="chart-container">
-            <canvas id="radarChart"></canvas>
-        </div>
+    <div class="sticky">
+        <label><input type="radio" name="service" value="service1"> Service 1</label>
+        <label><input type="radio" name="service" value="service2"> Service 2</label>
+        <label><input type="radio" name="service" value="service3"> Service 3</label>
     </div>
+    
+    <div id="service-overview"></div>
+    
+    <div class="chart-container">
+        <canvas id="lineChart"></canvas>
+    </div>
+    
+    <div class="chart-container">
+        <canvas id="barChart"></canvas>
+    </div>
+    
+    <div id="rating-summary"></div>
+    
     <script src="script.js"></script>
 </body>
 </html>
