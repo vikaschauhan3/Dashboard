@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const ctx = document.getElementById('orgChart').getContext('2d');
     new Chart(ctx, {
