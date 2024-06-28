@@ -1,68 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organization Comparison Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
-    <style>
-        .org-card {
-            background-color: white;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .org-card h2 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        .org-card p {
-            margin-bottom: 0.5rem;
-        }
-    </style>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/vikaschauhan3/customization/main/styles.css">
+    <script src="https://raw.githubusercontent.com/vikaschauhan3/customization/main/script.js"></script>
 </head>
-<body class="bg-gray-100 p-8">
-    <div class="max-w-6xl mx-auto">
-        <h1 class="text-3xl font-bold mb-6 text-center">Organization Comparison Dashboard</h1>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div class="org-card">
-                <h2>IAIA</h2>
-                <p><strong>Website:</strong> <a href="https://iaia.org" target="_blank" class="text-blue-500 hover:underline">iaia.org</a></p>
-                <p><strong>Core Focus:</strong> Impact Assessment across various sectors</p>
-                <p><strong>Primary Training Areas:</strong> Environmental, Social, and Economic Impact Assessments</p>
-                <p><strong>Target Audience:</strong> Professionals in environmental and social impact fields</p>
-            </div>
-            <div class="org-card">
-                <h2>CPIA</h2>
-                <p><strong>Website:</strong> <a href="https://cpia.queensu.ca" target="_blank" class="text-blue-500 hover:underline">cpia.queensu.ca</a></p>
-                <p><strong>Core Focus:</strong> Public Policy, Administration, and Impact Evaluation</p>
-                <p><strong>Primary Training Areas:</strong> Public policy analysis, program evaluation, impact assessment</p>
-                <p><strong>Target Audience:</strong> Public administrators, policy makers, and evaluators</p>
-            </div>
-            <div class="org-card">
-                <h2>IPDET</h2>
-                <p><strong>Website:</strong> <a href="https://ipdet.org" target="_blank" class="text-blue-500 hover:underline">ipdet.org</a></p>
-                <p><strong>Core Focus:</strong> Development Evaluation and Training</p>
-                <p><strong>Primary Training Areas:</strong> Development evaluation, data analysis, and impact reporting</p>
-                <p><strong>Target Audience:</strong> Government officials, evaluators, and development practitioners</p>
-            </div>
-        </div>
-        
-        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-            <h2 class="text-2xl font-bold mb-4">Comparison Chart</h2>
-            <canvas id="comparisonChart"></canvas>
-        </div>
-        
-        <div class="bg-white rounded-lg shadow-lg p-6">
-            <h2 class="text-2xl font-bold mb-4">Radar Chart Comparison</h2>
-            <canvas id="radarChart"></canvas>
-        </div>
-    </div>
 
-    <script src="dashboard.js"></script>
+<body>
+    <div id="instructions">
+        <p>Welcome to our Emotion Wheel Challenge! Today, we'll explore how different emotions impact our actions and decisions. You'll get a chance to spin the wheel, dive into a scenario to discover your emotions, and challenge yourself to apply emotional intelligence techniques effectively. Are you ready to understand and control your emotional responses better? Let's get started!</p>
+    </div>
+    <div id="wheel-container">
+        <div id="wheel"></div>
+        <div id="pointer">▼</div>
+    </div>
+    <button id="spin-button" onclick="spinWheel()">Spin the Wheel</button>
+    <div id="scenario"></div>
+    <div id="emotions"></div>
+    <div id="eiTechnique">
+        <p>Suggest an emotional intelligence technique to handle this emotion:</p>
+        <textarea id="technique" placeholder="Enter your technique here. Feel free to provide a detailed explanation."></textarea>
+        <button onclick="submitTechnique()">Submit</button>
+    </div>
+    <div id="feedback"></div>
 </body>
+
 </html>
